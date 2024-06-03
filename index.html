@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        canvas {
+            display: block;
+        }
+        .title {
+            position: absolute;
+            top: 50px; /* 向下移动 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 80px;
+            color: rgb(12, 0, 0);
+            font-weight: bold;
+            font-family: "Times New Roman", serif; /* 设置衬线体 */
+        }
+
+        .f1{
+            position: fixed;
+            top: 130px; /* 向下移动 */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            color: rgb(26, 0, 0);
+            font-weight: bold;
+            font-family: "Times New Roman", serif; /* 设置衬线体 */
+
+        }
+        .bottom-icons {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .bottom-icons a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .bottom-icons img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+            transform-origin: center center;  /* 确保从中心放大 */
+        }
+        .bottom-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="title">MAGA HEADBAND</div>
+    <div class="f1">I'm sure trump will be wearing our maga headband soon.</div>
+    <div class="bottom-icons">
+        <a href="https://t.me/MAGAHEADBAND" target="_blank">
+            <img src="models\tg.png" alt="Telegram">
+        </a>
+        <a href="https://x.com/MAGAHEADBAND" target="_blank">
+            <img src="models\twitter.png" alt="X">
+        </a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
